@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+from PIL import Image
 
 
 plt.style.use('seaborn')
@@ -13,7 +14,7 @@ def space(num_lines=1):
 
 df = pd.read_csv('ESport_Earnings.csv',encoding='gbk')
 st.title('ESport Earnings Data by Cheng Ma and Ziyi Zhao')
-
+st.image(Image.open('dataset-cover.jpg'))
 space(1)
 
 price_filter = st.slider('Total Money Earnings from the game:', 0, 40000000, 10000000)
